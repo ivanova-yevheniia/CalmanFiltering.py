@@ -15,20 +15,6 @@ def open_file():
     lat: latitude
     lom: longitude
 '''
-
-def change_data(gpx_file_path):
-    gpx_file = open(gpx_file_path, 'r')
-    gpx = gpxpy.parse(gpx_file)
-    gpx_file.close()
-    for track in gpx.tracks:
-        for segment in track.segments:
-            for point in segment.points:
-                point.latitude = float(point.latitude + np.random.normal(0, 0.00000007, 1))
-                point.longitude = float(point.longitude + np.random.normal(0, 0.00000007, 1))
-    gpx_file = open(gpx_file_path, 'w')
-    gpx_file.write(gpx.to_xml(version="1.0"))
-    gpx_file.close()
-
 def get_data(gpx_file_path):
     gpx_file = open(gpx_file_path, 'r')
     gpx = gpxpy.parse(gpx_file)
@@ -41,9 +27,8 @@ def get_data(gpx_file_path):
     gpx_file.close()
     return df
 
-forest = get_data('data/Forest.gpx')
+dt = get_data('data/Forest.gpx')
 
-change_data('data/Forest.gpx')
 #noise = get_data("C:\\Users\\yevhe\\PycharmProjects\\calmanFilter\\data\\Noise.gpx")
 #print(forest.to_string())
 
