@@ -1,5 +1,4 @@
 import gpxpy
-import gpxpy.gpx
 import os
 import numpy as np
 import pandas as pd
