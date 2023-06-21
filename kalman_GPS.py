@@ -45,7 +45,7 @@ plt.plot(smoothed_state_means[:, 0], smoothed_state_means[:, 2], 'r--', label='K
 new_df = pd.DataFrame(columns=['lon', 'lat'])
 for row in range(0, len(smoothed_state_means)):
     new_df.loc[len(new_df)] = [smoothed_state_means[row, 0], smoothed_state_means[row, 2]]
-filename = 'data/calman.csv'
+filename = 'data/kalman.csv'
 new_df.to_csv(filename, index=False)
 
 
