@@ -1,8 +1,8 @@
-# CalmanFiltering.py
+# Kalman Filter
 GPS-data processing using Calman Filter
 
 1. Download all required libraries:  **pip install -r requirements.txt**
-2. Example of Calman Filtering with Sinusoidal Signal **python testCalman.py**.
+2. Example of Kalman Filtering with Sinusoidal Signal **python testCalman.py**.
 Results:  **start report/sin.png**
 3. Get your GPS-data with app [GPS Logger](https://play.google.com/store/apps/details?id=eu.basicairdata.graziano.gpslogger&hl=de)
 4. Import your data with extension gpx to **data** folder
