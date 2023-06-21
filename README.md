@@ -1,5 +1,5 @@
 # Kalman Filter
-GPS-data processing using Calman Filter
+GPS-data processing using Kalman Filter
 
 1. Download all required libraries:  **pip install -r requirements.txt**
 2. Example of Kalman Filtering with Sinusoidal Signal **python testCalman.py**.
